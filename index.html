@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ca" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toc a la Terra - Restaurant</title>
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-brand-dark text-brand-light font-sans selection:bg-brand-accent selection:text-brand-dark antialiased">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/60 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-full border border-brand-accent flex items-center justify-center bg-brand-dark text-brand-accent font-serif text-xl font-bold shadow-lg">
+                        T
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl font-bold tracking-wide text-white block leading-none">Toc a la Terra</span>
+                        <span class="text-[10px] tracking-widest uppercase text-brand-accent font-semibold">Restaurant</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#inici" class="text-white hover:text-brand-accent transition-colors py-1">Inici</a>
+                    <a href="#nosaltres" class="text-white/80 hover:text-brand-accent transition-colors py-1">Sobre Nosaltres</a>
+                    <a href="#carta" class="text-white/80 hover:text-brand-accent transition-colors py-1 px-3 py-1 rounded-full border border-white/20 hover:border-brand-accent">La Carta</a>
+                    <a href="#horaris" class="text-white/80 hover:text-brand-accent transition-colors py-1">Horaris & Ubicació</a>
+                    <a href="#reserva" class="bg-brand-accent hover:bg-brand-secondary text-brand-dark px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-lg hover:scale-105">
+                        Reservar Taula
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-accent focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark/95 border-b border-brand-accent/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inici" class="block px-3 py-2 rounded-md hover:bg-brand-surface text-brand-light">Inici</a>
+            <a href="#nosaltres" class="block px-3 py-2 rounded-md hover:bg-brand-surface text-brand-light">Sobre Nosaltres</a>
+            <a href="#carta" class="block px-3 py-2 rounded-md hover:bg-brand-surface text-brand-light">La Carta</a>
+            <a href="#horaris" class="block px-3 py-2 rounded-md hover:bg-brand-surface text-brand-light">Horaris & Ubicació</a>
+            <a href="#reserva" class="block w-full text-center bg-brand-accent text-brand-dark font-bold px-4 py-3 rounded-full transition-all mt-4">
+                Reservar Taula
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION - FULL SCREEN HERO COVER -->
+    <section id="inici" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-dark pt-16">
+        
+        <!-- Fons a pantalla completa amb la Façana Exterior REAL del Restaurant (Sense dibuixos ni SVGs) -->
+        <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('assets/img/facade.jpg');">
+            <!-- Overlay fosc degradat per garantir alta legibilitat del text -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/65"></div>
+        </div>
+
+        <!-- Contingut Central Hero -->
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center justify-center min-h-[85vh]">
+            
+            <div class="mb-4">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-black/40 text-brand-accent text-xs sm:text-sm tracking-widest font-semibold uppercase border border-brand-accent/30 backdrop-blur-md">
+                    Restaurant · Vic
+                </span>
+            </div>
+
+            <h1 class="font-serif text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight text-white mb-6 leading-none text-glow">
+                Toc <span class="italic font-light text-brand-cream">a la</span> Terra
+            </h1>
+            
+            <p class="font-serif text-2xl sm:text-3xl md:text-4xl text-white/95 max-w-3xl mx-auto mb-10 font-normal italic leading-snug text-glow">
+                El <span class="font-semibold text-brand-accent not-italic">bon vivant</span> aplicat a la cuina de proximitat més autèntica.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                <a href="#carta" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-accent hover:bg-brand-secondary text-brand-dark font-bold transition-all duration-300 transform hover:scale-105 shadow-xl text-base flex items-center justify-center space-x-2">
+                    <span>Descobreix la carta</span>
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+                <a href="#reserva" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold backdrop-blur-md border border-white/20 transition-all duration-300 text-base flex items-center justify-center space-x-2">
+                    <i class="fa-regular fa-calendar-check text-brand-accent"></i>
+                    <span>Reservar Taula</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSALTRES (Text Netejat Sense Imatges) -->
+    <section id="nosaltres" class="py-24 bg-brand-dark relative wood-texture">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="space-y-6">
+                <div class="inline-block px-3 py-1 rounded-md bg-brand-accent/10 text-brand-accent text-xs uppercase tracking-widest font-semibold border border-brand-accent/20">
+                    L'Essència del Restaurant
+                </div>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-light leading-tight">
+                    Un espai on la fusta, el caliu i el bon menjar s'uneixen.
+                </h2>
+                <div class="w-16 h-0.5 bg-brand-accent mx-auto my-4"></div>
+                <p class="text-brand-cream/90 leading-relaxed font-light text-lg sm:text-xl">
+                    A <strong class="text-brand-accent font-medium">Toc a la Terra</strong> celebrem els sabors autèntics amb ingredients seleccionats de productors locals. El nostre espai ha estat dissenyat per oferir una atmosfera acollidora, íntima i relaxada.
+                </p>
+                <p class="text-brand-cream/70 leading-relaxed text-base max-w-3xl mx-auto">
+                    Amb una arquitectura basada en elements de fusta natural, parets de pedra recuperades i una il·luminació càlida cuidadosament pensada, transformem cada àpat en un moment especial per gaudir en bona companyia.
+                </p>
+                
+                <!-- Targetes d'essència -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-10 border-t border-brand-accent/10 mt-8">
+                    <div class="flex flex-col items-center space-y-2 p-6 rounded-2xl glass-panel">
+                        <div class="text-brand-accent text-3xl mb-2"><i class="fa-solid fa-seedling"></i></div>
+                        <h4 class="font-semibold text-brand-light text-base">Producte Local</h4>
+                        <p class="text-xs text-brand-cream/60">De la terra a la vostra taula amb ingredients de proximitat.</p>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2 p-6 rounded-2xl glass-panel">
+                        <div class="text-brand-accent text-3xl mb-2"><i class="fa-solid fa-couch"></i></div>
+                        <h4 class="font-semibold text-brand-light text-base">Espai Acolledor</h4>
+                        <p class="text-xs text-brand-cream/60">Un entorn càlid de fusta i pedra ideal per relaxar-se.</p>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2 p-6 rounded-2xl glass-panel">
+                        <div class="text-brand-accent text-3xl mb-2"><i class="fa-solid fa-wine-glass"></i></div>
+                        <h4 class="font-semibold text-brand-light text-base">Celler Seleccionat</h4>
+                        <p class="text-xs text-brand-cream/60">Maridatges excepcionals amb vins del territori.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LA CARTA / MENÚ -->
+    <section id="carta" class="py-24 bg-brand-surface relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-accent text-xs font-semibold uppercase tracking-widest">Gastronomia d'Autor</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-brand-light mt-2 mb-4">La Nostra Carta</h2>
+                <div class="w-16 h-0.5 bg-brand-accent mx-auto"></div>
+                <p class="text-brand-cream/70 mt-4 font-light">Una selecció de plats elaborats amb afecte i producte fresc de temporada.</p>
+            </div>
+
+            <!-- Tabs de Menú -->
+            <div class="flex justify-center flex-wrap gap-2 mb-12" id="menu-tabs">
+                <button onclick="filterMenu('picar')" class="tab-btn active px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-brand-accent text-brand-dark shadow-md" data-tab="picar">
+                    Per Picar
+                </button>
+                <button onclick="filterMenu('primers')" class="tab-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 glass-panel text-brand-cream hover:text-brand-accent" data-tab="primers">
+                    Primers Plats
+                </button>
+                <button onclick="filterMenu('segons')" class="tab-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 glass-panel text-brand-cream hover:text-brand-accent" data-tab="segons">
+                    Segons Plats
+                </button>
+                <button onclick="filterMenu('postres')" class="tab-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 glass-panel text-brand-cream hover:text-brand-accent" data-tab="postres">
+                    Postres
+                </button>
+                <button onclick="filterMenu('vins')" class="tab-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 glass-panel text-brand-cream hover:text-brand-accent" data-tab="vins">
+                    Vins & Caves
+                </button>
+            </div>
+
+            <!-- Menú Items Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="menu-container">
+                
+                <!-- Item 1 (Picar) -->
+                <div class="menu-item picar glass-panel p-6 rounded-2xl border border-brand-accent/10 hover:border-brand-accent/40 transition-all duration-300">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="font-serif text-xl font-semibold text-brand-light">Croquetes de Cama-sec i Pernil Ibèric</h3>
+                        <span class="font-serif text-lg font-bold text-brand-accent">11.50 €</span>
+                    </div>
+                    <p class="text-brand-cream/60 text-sm font-light">Cremoses per dins, molt cruixents per fora, seguint la recepta tradicional (6 unitats).</p>
+                </div>
+
+                <!-- Item 2 (Picar) -->
+                <div class="menu-item picar glass-panel p-6 rounded-2xl border border-brand-accent/10 hover:border-brand-accent/40 transition-all duration-300">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="font-serif text-xl font-semibold text-brand-light">Taula de Formatges Artesans de la Terra</h3>
+                        <span class="font-serif text-lg font-bold text-brand-accent">16.00 €</span>
+                    </div>
+                    <p class="text-brand-cream/60 text-sm font-light">Selecció de formatges artesanals maridats amb confitures de la casa i fruits secs.</p>
+                </div>
+
+                <!-- Item 3 (Picar) -->
+                <div class="menu-item picar glass-panel p-6 rounded-2xl border border-brand-accent/10 hover:border-brand-accent/40 transition-all duration-300">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="font-serif text-xl font-semibold text-brand-light">Patates "Toc a la Terra"</h3>
+                        <span class="font-serif text-lg font-bold text-brand-accent">8.50 €</span>
+                    </div>
+                    <p class="text-brand-cream/60 text-sm font-light">Tallades a mà amb salsa brava d'all negre i oli de romaní.</p>
+                </div>
+
+                <!-- Item 4 (Primers) -->
+                <div class="menu-item primers hidden glass-panel p-6 rounded-2xl border border-brand-accent/10 hover:border-brand-accent/40 transition-all duration-300">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="font-serif text-xl font-semibold text-brand-light">Caneló Tradicional de Rustit amb Trufa</h3>
+                        <span class="font-serif text-lg font-bold text-brand-accent">14.50 €</span>
+                    </div>
+                    <p class="text-brand-cream/60 text-sm font-light">Fet a foc lent amb tres carns, velouté lleugera i ratlladura de trufa de la comarca.</p>
+                </div>
+
+                <!-- Item 5 (Primers) -->
+                <div class="menu-item primers hidden glass-panel p-6 rounded-2xl border border-brand-accent/10 hover:border-brand-accent/40 transition-all duration-300">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="font-serif text-xl font-semibold text-brand-light">Amanida Templada de Formatge de Muntanya</h3>
+                        <span class="font-serif text-lg font-bold text-brand-accent">12.50 €</span>
+                    </div>
+                    <p class="text-brand-cream/60 text-sm font-light">Brots tendres, figues, nous caramel·litzades i vinagreta de mel i mostassa.</p>
+                </div>
+
+                <!-- Item 6 (Segons) -->
+                <div class="menu-item segons hidden glass-panel p-6 rounded-2xl border border-brand-accent/10 hover:border-brand-accent/40 transition-all duration-300">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="font-serif text-xl font-semibold text-brand-light">Entrecot de Vedella a la Llosa</h3>
+                        <span class="font-serif text-lg font-bold text-brand-accent">22.00 €</span>
+                    </div>
+                    <p class="text-brand-cream/60 text-sm font-light">350g de vedella de proximitat amb sal en escates i verduretes a la graella.</p>
+                </div>
+
+                <!-- Item 7 (Segons) -->
+                <div class="menu-item segons hidden glass-panel p-6 rounded-2xl border border-brand-accent/10 hover:border-brand-accent/40 transition-all duration-300">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="font-serif text-xl font-semibold text-brand-light">Bacallà Confitat amb Parmentier d'Alls Coents</h3>
+                        <span class="font-serif text-lg font-bold text-brand-accent">19.50 €</span>
+                    </div>
+                    <p class="text-brand-cream/60 text-sm font-light">Llom de bacallà fresc confitat a baixa temperatura amb melmelada de tomàquet casolana.</p>
+                </div>
+
+                <!-- Item 8 (Postres) -->
+                <div class="menu-item postres hidden glass-panel p-6 rounded-2xl border border-brand-accent/10 hover:border-brand-accent/40 transition-all duration-300">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="font-serif text-xl font-semibold text-brand-light">Mel i Mató amb Fum de Romaní</h3>
+                        <span class="font-serif text-lg font-bold text-brand-accent">6.50 €</span>
+                    </div>
+                    <p class="text-brand-cream/60 text-sm font-light">Mató artesanal de ramat local, mel de flors de bosc i cruixent d'ametlla.</p>
+                </div>
+
+                <!-- Item 9 (Vins) -->
+                <div class="menu-item vins hidden glass-panel p-6 rounded-2xl border border-brand-accent/10 hover:border-brand-accent/40 transition-all duration-300">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="font-serif text-xl font-semibold text-brand-light">Vi Negre D.O. Terra Alta / Montsant</h3>
+                        <span class="font-serif text-lg font-bold text-brand-accent">18.00 €</span>
+                    </div>
+                    <p class="text-brand-cream/60 text-sm font-light">Garnatxa i Carinyena amb 12 mesos de criança en bóta de roure.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HORARIS I UBICACIÓ -->
+    <section id="horaris" class="py-24 bg-brand-dark wood-texture relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Card d'Horaris Exactes -->
+                <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-brand-accent/20 shadow-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-brand-accent/20 flex items-center justify-center text-brand-accent text-xl">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl font-bold text-brand-light">Horari d'Obertura</h3>
+                                <p class="text-xs text-brand-cream/60">Us esperem amb els braços oberts</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 font-light text-sm">
+                            <!-- Dilluns -->
+                            <div class="flex justify-between items-center py-2.5 border-b border-brand-accent/10">
+                                <span class="font-medium text-brand-cream">Dilluns</span>
+                                <span class="px-3 py-1 rounded-full bg-red-900/40 text-red-300 text-xs font-semibold">Tancat</span>
+                            </div>
+
+                            <!-- Dimarts -->
+                            <div class="flex justify-between items-center py-2.5 border-b border-brand-accent/10">
+                                <span class="font-medium text-brand-cream">Dimarts</span>
+                                <span class="text-brand-accent font-medium">13:00 – 15:30</span>
+                            </div>
+
+                            <!-- Dimecres -->
+                            <div class="flex justify-between items-center py-2.5 border-b border-brand-accent/10">
+                                <span class="font-medium text-brand-cream">Dimecres</span>
+                                <span class="text-brand-accent font-medium">13:00 – 15:30</span>
+                            </div>
+
+                            <!-- Dijous -->
+                            <div class="flex justify-between items-center py-2.5 border-b border-brand-accent/10">
+                                <span class="font-medium text-brand-cream">Dijous</span>
+                                <div class="text-right">
+                                    <span class="text-brand-accent font-medium block">13:00 – 15:30</span>
+                                    <span class="text-brand-accent font-medium block">20:30 – 23:30</span>
+                                </div>
+                            </div>
+
+                            <!-- Divendres -->
+                            <div class="flex justify-between items-center py-2.5 border-b border-brand-accent/10">
+                                <span class="font-medium text-brand-cream">Divendres</span>
+                                <div class="text-right">
+                                    <span class="text-brand-accent font-medium block">13:00 – 15:30</span>
+                                    <span class="text-brand-accent font-medium block">20:30 – 23:30</span>
+                                </div>
+                            </div>
+
+                            <!-- Dissabte -->
+                            <div class="flex justify-between items-center py-2.5 border-b border-brand-accent/10">
+                                <span class="font-medium text-brand-cream">Dissabte</span>
+                                <div class="text-right">
+                                    <span class="text-brand-accent font-medium block">13:00 – 15:30</span>
+                                    <span class="text-brand-accent font-medium block">20:30 – 23:30</span>
+                                </div>
+                            </div>
+
+                            <!-- Diumenge -->
+                            <div class="flex justify-between items-center py-2.5">
+                                <span class="font-medium text-brand-cream">Diumenge</span>
+                                <span class="text-brand-accent font-medium">13:00 – 15:30</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-4 rounded-xl bg-brand-accent/10 border border-brand-accent/20 flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-info text-brand-accent text-lg"></i>
+                        <p class="text-xs text-brand-cream/80">Recomanem fer la vostra reserva prèviament per garantir disponibilitat.</p>
+                    </div>
+                </div>
+
+                <!-- Ubicació i Mapa Google Maps Interactiu -->
+                <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-brand-accent/20 shadow-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-brand-accent/20 flex items-center justify-center text-brand-accent text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl font-bold text-brand-light">Troba'ns a Vic</h3>
+                                <p class="text-xs text-brand-cream/60">Ubicació al barri antic de Vic</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 text-brand-cream/80 text-sm font-light mb-6">
+                            <div class="flex items-start space-x-4">
+                                <i class="fa-solid fa-map-pin text-brand-accent text-lg mt-1"></i>
+                                <div>
+                                    <strong class="text-brand-light block font-semibold mb-0.5">Restaurant Toc a la Terra</strong>
+                                    <p>Carrer de Sant Miquel dels Sants, 5<br>08500 Vic, Barcelona</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <i class="fa-solid fa-phone text-brand-accent text-lg mt-1"></i>
+                                <div>
+                                    <strong class="text-brand-light block font-semibold mb-0.5">Telèfon de Contacte:</strong>
+                                    <a href="tel:+34938123456" class="hover:text-brand-accent transition-colors">+34 938 12 34 56</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Iframe Interactiu Real Corregit -->
+                    <div class="relative w-full h-[400px] rounded-2xl overflow-hidden border border-brand-accent/30 shadow-inner bg-brand-dark">
+                        <a href="https://maps.google.com/?cid=6203633361490593803" target="_blank" rel="noopener" class="block w-full h-full"><img src="assets/img/mapa.jpg" alt="Mapa: Toc a la Terra, Carrer de Sant Miquel dels Sants, 5, Vic" class="w-full h-full object-cover object-center"></a>
+                        <a href="https://maps.google.com/?cid=6203633361490593803" target="_blank" class="absolute bottom-3 right-3 bg-brand-dark/90 text-brand-accent text-xs px-3.5 py-2 rounded-lg border border-brand-accent/40 hover:bg-brand-accent hover:text-brand-dark transition-colors font-semibold z-10 flex items-center space-x-1.5 shadow-lg">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            <span>Obrir a Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARI DE RESERVA INTERACTIU -->
+    <section id="reserva" class="py-24 bg-brand-surface relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-brand-accent/30 shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-12 -right-12 w-40 h-40 bg-brand-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center mb-10">
+                    <span class="text-brand-accent text-xs font-semibold uppercase tracking-widest">Reserva Online</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-light mt-1">Assegura la teva taula</h2>
+                    <p class="text-brand-cream/70 text-sm mt-2 font-light">Confirmació immediata segons disponibilitat.</p>
+                </div>
+
+                <!-- Missatge d'èxit de reserva -->
+                <div id="booking-success" class="hidden bg-brand-sage/20 border border-brand-sage text-brand-light p-6 rounded-2xl text-center space-y-3 mb-8">
+                    <div class="w-12 h-12 bg-brand-sage text-brand-dark rounded-full flex items-center justify-center mx-auto text-xl font-bold">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h4 class="font-serif text-2xl font-semibold">Reserva Sol·licitada!</h4>
+                    <p class="text-sm text-brand-cream/90">Gràcies per triar Toc a la Terra. Us hem registrat la reserva correctament.</p>
+                    <button onclick="resetBooking()" class="text-xs text-brand-accent hover:underline font-semibold pt-2">Fer una altra reserva</button>
+                </div>
+
+                <form id="booking-form" onsubmit="handleBooking(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        
+                        <!-- Data -->
+                        <div>
+                            <label class="block text-xs font-medium uppercase tracking-wider text-brand-cream/80 mb-2">Data</label>
+                            <input type="date" required id="reserve-date" class="w-full bg-brand-dark/80 border border-brand-accent/30 rounded-xl px-4 py-3 text-brand-light focus:outline-none focus:border-brand-accent transition-colors text-sm">
+                        </div>
+
+                        <!-- Hora -->
+                        <div>
+                            <label class="block text-xs font-medium uppercase tracking-wider text-brand-cream/80 mb-2">Torn / Hora</label>
+                            <select required id="reserve-time" class="w-full bg-brand-dark/80 border border-brand-accent/30 rounded-xl px-4 py-3 text-brand-light focus:outline-none focus:border-brand-accent transition-colors text-sm">
+                                <option value="">Selecciona hora...</option>
+                                <optgroup label="Dinar (Dimarts a Diumenge)">
+                                    <option value="13:00">13:00 h</option>
+                                    <option value="13:30">13:30 h</option>
+                                    <option value="14:00">14:00 h</option>
+                                    <option value="14:30">14:30 h</option>
+                                </optgroup>
+                                <optgroup label="Sopar (Dijous a Dissabte)">
+                                    <option value="20:30">20:30 h</option>
+                                    <option value="21:00">21:00 h</option>
+                                    <option value="21:30">21:30 h</option>
+                                    <option value="22:00">22:00 h</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <!-- Comensals -->
+                        <div>
+                            <label class="block text-xs font-medium uppercase tracking-wider text-brand-cream/80 mb-2">Comensals</label>
+                            <select required class="w-full bg-brand-dark/80 border border-brand-accent/30 rounded-xl px-4 py-3 text-brand-light focus:outline-none focus:border-brand-accent transition-colors text-sm">
+                                <option value="1">1 Persona</option>
+                                <option value="2" selected>2 Persones</option>
+                                <option value="3">3 Persones</option>
+                                <option value="4">4 Persones</option>
+                                <option value="5">5 Persones</option>
+                                <option value="6">6+ Persones (Grup)</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Nom -->
+                        <div>
+                            <label class="block text-xs font-medium uppercase tracking-wider text-brand-cream/80 mb-2">Nom i Cognoms</label>
+                            <input type="text" required placeholder="Ex. Marc Soler" class="w-full bg-brand-dark/80 border border-brand-accent/30 rounded-xl px-4 py-3 text-brand-light focus:outline-none focus:border-brand-accent transition-colors text-sm">
+                        </div>
+
+                        <!-- Telèfon -->
+                        <div>
+                            <label class="block text-xs font-medium uppercase tracking-wider text-brand-cream/80 mb-2">Telèfon Mòbil</label>
+                            <input type="tel" required placeholder="+34 600 000 000" class="w-full bg-brand-dark/80 border border-brand-accent/30 rounded-xl px-4 py-3 text-brand-light focus:outline-none focus:border-brand-accent transition-colors text-sm">
+                        </div>
+                    </div>
+
+                    <!-- Observacions -->
+                    <div>
+                        <label class="block text-xs font-medium uppercase tracking-wider text-brand-cream/80 mb-2">Comentaris o Intoleràncies (Opcional)</label>
+                        <textarea rows="3" placeholder="Alergies, preferències de taula..." class="w-full bg-brand-dark/80 border border-brand-accent/30 rounded-xl px-4 py-3 text-brand-light focus:outline-none focus:border-brand-accent transition-colors text-sm resize-none"></textarea>
+                    </div>
+
+                    <!-- Botó de Submissió -->
+                    <button type="submit" class="w-full py-4 bg-brand-accent hover:bg-brand-secondary text-brand-dark font-bold rounded-xl transition-all duration-300 shadow-lg shadow-brand-accent/20 flex items-center justify-center space-x-2 text-base">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Confirmar Reserva</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark border-t border-brand-accent/20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+                
+                <!-- Logo Footer -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full border border-brand-accent flex items-center justify-center bg-brand-dark text-brand-accent font-serif text-sm font-bold">
+                        T
+                    </div>
+                    <span class="font-serif text-xl font-bold text-brand-light">Toc a la Terra</span>
+                </div>
+
+                <!-- Xarxes Socials -->
+                <div class="flex space-x-6 text-xl text-brand-cream/70">
+                    <a href="#" class="hover:text-brand-accent transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-brand-accent transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-brand-accent transition-colors"><i class="fa-brands fa-tripadvisor"></i></a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-xs text-brand-cream/50 text-center md:text-right">
+                    <p>&copy; 2026 Toc a la Terra Restaurant (Vic). Tots els drets reservats.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LÒGICA -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
